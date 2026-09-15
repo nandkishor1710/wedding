@@ -21,8 +21,11 @@
 
   <!-- HTML5 Background Wedding Audio Player -->
   <audio id="wedding-audio" loop preload="auto">
-    <source src="assets/wedding_music.mp3.wav" type="audio/wav">
+    <source src="wedding_music.mp3" type="audio/mpeg">
+    <source src="wedding_music.mp3.wav" type="audio/wav">
+    <source src="wedding_music.wav" type="audio/wav">
     <source src="assets/wedding_music.mp3" type="audio/mpeg">
+    <source src="assets/wedding_music.mp3.wav" type="audio/wav">
     <source src="assets/wedding_music.wav" type="audio/wav">
   </audio>
 
@@ -62,7 +65,7 @@
     </div>
 
     <div class="welcome-card-wrapper">
-      <img src="images/ganesha.png" alt="श्री गणेशाय नमः" class="welcome-ganesha">
+      <img src="ganesha.png" alt="श्री गणेशाय नमः" class="welcome-ganesha" onerror="if(!this.src.endsWith('images/ganesha.png')){this.src='images/ganesha.png';}">
       <div class="shubh-vivah-badge">|| शुभ विवाह ||</div>
       <div class="welcome-couple-names">Nandkishor <span>❤️</span> Diksha</div>
       <div class="welcome-date-badge"><i class="fa-regular fa-calendar-check"></i> 25 November 2026</div>
@@ -96,7 +99,7 @@
         <div class="peacock-feather-container" style="text-align: center; margin-bottom: 10px; font-size: 2rem; color: #D4AF37;">
           🦚 <span style="font-size: 1.1rem; vertical-align: middle; font-family: var(--font-hindi-title); color: var(--gold-light);">शुभ विवाह निमंत्रण</span> 🦚
         </div>
-        <img src="images/ganesha.png" alt="श्री गणेश जी" class="ganesha-header-img">
+        <img src="ganesha.png" alt="श्री गणेश जी" class="ganesha-header-img" onerror="if(!this.src.endsWith('images/ganesha.png')){this.src='images/ganesha.png';}">
         <div class="sanskrit-shloka">
           || श्री गणेशाय नमः ||<br>
           विघन हरण मंगल करण, गणनायक गणराज।<br>
@@ -151,7 +154,7 @@
           <!-- Groom Card -->
           <div class="person-card">
             <div class="photo-frame">
-              <img src="images/groom.jpg" alt="वर: आयुष्मान नन्दकिशोर">
+              <img src="groom.jpg" alt="वर: आयुष्मान नन्दकिशोर" onerror="if(!this.src.endsWith('images/groom.jpg')){this.src='images/groom.jpg';}">
             </div>
             <div class="person-title">आयुष्मान (वर)</div>
             <h3 class="person-name">नन्दकिशोर</h3>
@@ -168,7 +171,7 @@
           <!-- Bride Card -->
           <div class="person-card">
             <div class="photo-frame">
-              <img src="images/bride.jpg" alt="वधू: आयुष्मती दीक्षा">
+              <img src="bride.jpg" alt="वधू: आयुष्मती दीक्षा" onerror="if(!this.src.endsWith('images/bride.jpg')){this.src='images/bride.jpg';}">
             </div>
             <div class="person-title">आयुष्मती (वधू)</div>
             <h3 class="person-name">दीक्षा</h3>
@@ -471,9 +474,9 @@
         <div class="cards-grid">
           
           <!-- Card 1: Main Invite -->
-          <div class="card-preview-item" data-card-src="images/card_main.jpg" data-card-title="मुख्य विवाह निमंत्रण">
+          <div class="card-preview-item" data-card-src="card_main.jpg" data-card-title="मुख्य विवाह निमंत्रण">
             <div class="card-thumb-wrapper">
-              <img src="images/card_main.jpg" alt="मुख्य विवाह निमंत्रण" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>📜 मुख्य विवाह निमंत्रण</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_main.jpg सेव करें]</text></svg>';">
+              <img src="card_main.jpg" alt="मुख्य विवाह निमंत्रण" onerror="if(!this.src.endsWith('images/card_main.jpg')){this.src='images/card_main.jpg';}">
               <div class="card-hover-overlay">
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
                 <span>कार्ड पूरा देखें (Zoom & Read)</span>
@@ -483,9 +486,9 @@
           </div>
 
           <!-- Card 2: Mangalik Karyakram -->
-          <div class="card-preview-item" data-card-src="images/card_mangalik.jpg" data-card-title="मांगलिक कार्यक्रम">
+          <div class="card-preview-item" data-card-src="card_mangalik.jpg" data-card-title="मांगलिक कार्यक्रम">
             <div class="card-thumb-wrapper">
-              <img src="images/card_mangalik.jpg" alt="मांगलिक कार्यक्रम" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>🪔 मांगलिक कार्यक्रम</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_mangalik.jpg सेव करें]</text></svg>';">
+              <img src="card_mangalik.jpg" alt="मांगलिक कार्यक्रम" onerror="if(!this.src.endsWith('images/card_mangalik.jpg')){this.src='images/card_mangalik.jpg';}">
               <div class="card-hover-overlay">
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
                 <span>कार्ड पूरा देखें (Zoom & Read)</span>
@@ -495,9 +498,9 @@
           </div>
 
           <!-- Card 3: Parinay Sutra Bandhan -->
-          <div class="card-preview-item" data-card-src="images/card_parichay.jpg" data-card-title="परिणय-सूत्र-बन्धन">
+          <div class="card-preview-item" data-card-src="card_parichay.jpg" data-card-title="परिणय-सूत्र-बन्धन">
             <div class="card-thumb-wrapper">
-              <img src="images/card_parichay.jpg" alt="परिणय-सूत्र-बन्धन" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>🤝 परिणय-सूत्र-बन्धन</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_parichay.jpg सेव करें]</text></svg>';">
+              <img src="card_parichay.jpg" alt="परिणay-सूत्र-बन्धन" onerror="if(!this.src.endsWith('images/card_parichay.jpg')){this.src='images/card_parichay.jpg';}">
               <div class="card-hover-overlay">
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
                 <span>कार्ड पूरा देखें (Zoom & Read)</span>
@@ -516,15 +519,15 @@
         <h2 class="section-title">मधुर स्मृतियां (फोटो गैलरी)</h2>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="images/couple.jpg" alt="आयुष्मान नन्दकिशोर संग आयुष्मती दीक्षा">
+            <img src="couple.jpg" alt="आयुष्मान नन्दकिशोर संग आयुष्मती दीक्षा" onerror="if(!this.src.endsWith('images/couple.jpg')){this.src='images/couple.jpg';}">
             <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
           </div>
           <div class="gallery-item">
-            <img src="images/groom.jpg" alt="वर आयुष्मान नन्दकिशोर">
+            <img src="groom.jpg" alt="वर आयुष्मान नन्दकिशोर" onerror="if(!this.src.endsWith('images/groom.jpg')){this.src='images/groom.jpg';}">
             <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
           </div>
           <div class="gallery-item">
-            <img src="images/bride.jpg" alt="वधू आयुष्मती दीक्षा">
+            <img src="bride.jpg" alt="वधू आयुष्मती दीक्षा" onerror="if(!this.src.endsWith('images/bride.jpg')){this.src='images/bride.jpg';}">
             <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
           </div>
         </div>
