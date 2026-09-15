@@ -500,6 +500,13 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', () => {
       const src = item.getAttribute('data-card-src');
       const title = item.getAttribute('data-card-title');
+      cardModalImg.onerror = function() {
+        if (!this.src.includes('images/')) {
+          this.src = 'images/' + src;
+        } else {
+          this.src = src;
+        }
+      };
       cardModalImg.src = src;
       cardModalTitle.innerText = title;
       resetZoom();
