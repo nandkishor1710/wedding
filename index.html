@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शुभ विवाह - आयुष्मान् नन्दकिशोर चौहान एवं आयुष्मती दीक्षा | Digital Wedding Invitation</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="शाही डिजिटल विवाह निमंत्रण पत्र - आयुष्मान् नन्दकिशोर चौहान एवं आयुष्मती दीक्षा। विवाह तिथि: 25 नवंबर 2026">
+  <meta property="og:title" content="शुभ विवाह निमंत्रण - आयुष्मान् नन्दकिशोर चौहान ❤️ आयुष्मती दीक्षा">
+  <meta property="og:description" content="आप सादर आमंत्रित हैं हमारे विवाह समारोह में। 25 नवंबर 2026">
+  <meta property="og:image" content="images/couple.jpg">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HTML5 Background Wedding Audio Player -->
+  <audio id="wedding-audio" loop preload="auto">
+    <source src="assets/wedding_music.mp3.wav" type="audio/wav">
+    <source src="assets/wedding_music.mp3" type="audio/mpeg">
+    <source src="assets/wedding_music.wav" type="audio/wav">
+  </audio>
+
+  <!-- Canvas for Floating Flower Petals & Gold Dust -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- Floating Music & Controls -->
+  <div class="floating-controls">
+    <button class="control-btn" id="music-toggle-btn" title="संगीत चालू / बंद करें">
+      <div class="music-bars">
+        <div class="music-bar"></div>
+        <div class="music-bar"></div>
+        <div class="music-bar"></div>
+      </div>
+    </button>
+    <button class="control-btn" id="petals-toggle-btn" title="पुष्प वर्षा चालू / बंद करें">
+      <i class="fa-solid fa-spa"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       1. WELCOME OVERLAY (शाही निमंत्रण द्वार - स्वागत स्क्रीन)
+       ========================================================================== -->
+  <div id="welcome-overlay">
+    <!-- Top Right Skip Intro Button -->
+    <button class="skip-intro-top-btn" id="skip-intro-top-btn" title="सीधे निमंत्रण देखें">
+      Skip Intro <i class="fa-solid fa-angles-right"></i>
+    </button>
+
+    <div class="door-panel door-left">
+      <div class="door-pattern"></div>
+      <div class="door-handle left-handle"></div>
+    </div>
+    <div class="door-panel door-right">
+      <div class="door-pattern"></div>
+      <div class="door-handle right-handle"></div>
+    </div>
+
+    <div class="welcome-card-wrapper">
+      <img src="images/ganesha.png" alt="श्री गणेशाय नमः" class="welcome-ganesha">
+      <div class="shubh-vivah-badge">|| शुभ विवाह ||</div>
+      <div class="welcome-couple-names">Nandkishor <span>❤️</span> Diksha</div>
+      <div class="welcome-date-badge"><i class="fa-regular fa-calendar-check"></i> 25 November 2026</div>
+      <div class="welcome-subtitle">शाही डिजिटल निमंत्रण पत्र में आपका हार्दिक स्वागत है</div>
+      <button class="open-invitation-btn" id="open-invite-btn">
+        <i class="fa-solid fa-envelope-open-text"></i> विवाह निमंत्रण खोलें
+      </button>
+      <br>
+      <button class="skip-animation-btn" id="skip-animation-btn">
+        <i class="fa-solid fa-forward-step"></i> Skip Intro (सीधे निमंत्रण देखें)
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN INVITATION CARD CONTAINER
+       ========================================================================== -->
+  <main class="main-wrapper">
+    <div class="royal-card-container">
+      
+      <!-- Corner Ornaments -->
+      <div class="corner-ornament corner-top-left"></div>
+      <div class="corner-ornament corner-top-right"></div>
+      <div class="corner-ornament corner-bottom-left"></div>
+      <div class="corner-ornament corner-bottom-right"></div>
+
+      <!-- ==========================================================================
+           2. MAIN WEDDING INVITATION & ROMANTIC QUOTE
+           ========================================================================== -->
+      <header class="header-section reveal-on-scroll">
+        <div class="peacock-feather-container" style="text-align: center; margin-bottom: 10px; font-size: 2rem; color: #D4AF37;">
+          🦚 <span style="font-size: 1.1rem; vertical-align: middle; font-family: var(--font-hindi-title); color: var(--gold-light);">शुभ विवाह निमंत्रण</span> 🦚
+        </div>
+        <img src="images/ganesha.png" alt="श्री गणेश जी" class="ganesha-header-img">
+        <div class="sanskrit-shloka">
+          || श्री गणेशाय नमः ||<br>
+          विघन हरण मंगल करण, गणनायक गणराज।<br>
+          प्रथम निमंत्रण आपको, पूरण कीजो काज ॥<br>
+          <span style="font-size: 1.05rem; opacity: 0.9;">ॐ वक्रतुण्ड महाकाय, सूर्य कोटि समप्रभः। निर्विघ्नं कुरु मे देव, सर्व कार्येषु सर्वदा ॥</span>
+        </div>
+
+        <!-- 2. Traditional Diyas near "शुभ विवाह" Heading -->
+        <div class="shubh-vivah-container">
+          <div class="diya-wrapper left-diya" title="शुभ दिप">
+            <div class="diya-flame"></div>
+            <div class="diya-base">🪔</div>
+          </div>
+          <h1 class="shubh-vivah-heading">शुभ विवाह</h1>
+          <div class="diya-wrapper right-diya" title="शुभ दिप">
+            <div class="diya-flame"></div>
+            <div class="diya-base">🪔</div>
+          </div>
+        </div>
+
+        <!-- 3. Golden Wedding Rings near "Nandkishor ❤️ Diksha" -->
+        <div class="romantic-quote-box">
+          <div class="romantic-heading">
+            <span class="golden-ring left-ring" title="विवाह अंगूठी">💍</span>
+            Nandkishor <span class="heart-pulse">❤️</span> Diksha
+            <span class="golden-ring right-ring" title="विवाह अंगूठी">💍</span>
+          </div>
+          <div class="romantic-quote-text">
+            “एक नई शुरुआत...<br>
+            दो दिल, एक रिश्ता, सात वचन।”
+          </div>
+        </div>
+
+        <div class="royal-divider">
+          <div class="divider-line"></div>
+          <i class="fa-solid fa-om divider-icon"></i>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="sanskrit-shloka" style="font-size: 1.15rem; color: var(--gold-light);">
+          परमपिता परमेश्वर की असीम अनुकम्पा से
+        </div>
+      </header>
+
+      <!-- ==========================================================================
+           3. GROOM & BRIDE PROFILE (वर-वधू परिचय)
+           ========================================================================== -->
+      <section class="couple-section reveal-on-scroll">
+        <h2 class="section-title">वर-वधू परिचय</h2>
+        <div class="couple-grid">
+          
+          <!-- Groom Card -->
+          <div class="person-card">
+            <div class="photo-frame">
+              <img src="images/groom.jpg" alt="वर: आयुष्मान नन्दकिशोर">
+            </div>
+            <div class="person-title">आयुष्मान (वर)</div>
+            <h3 class="person-name">नन्दकिशोर</h3>
+            <div class="parent-info-block">
+              <strong>सुपौत्र:</strong> स्व. श्रीमती रामो देवी एवं स्व. श्री मूल्या चौहान<br>
+              <strong>सुपुत्र:</strong> श्रीमती भूरी देवी एवं प्रकाश चौहान<br>
+              <strong>निवासी:</strong> नहर मोहल्ला, भनोखर, अलवर (राज.)
+            </div>
+          </div>
+
+          <!-- Wedding Symbol -->
+          <div class="wed-symbol">&</div>
+
+          <!-- Bride Card -->
+          <div class="person-card">
+            <div class="photo-frame">
+              <img src="images/bride.jpg" alt="वधू: आयुष्मती दीक्षा">
+            </div>
+            <div class="person-title">आयुष्मती (वधू)</div>
+            <h3 class="person-name">दीक्षा</h3>
+            <div class="parent-info-block">
+              <strong>सुपुत्री:</strong> श्रीमती विजय लक्ष्मी देवी एवं श्री रामबरण सिंह जी<br>
+              <strong>निवासी:</strong> खेडा, पोस्ट-वसुन्धरा, जिला-एटा, उ.प्र.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           4. COUNTDOWN TIMER (विवाह की उल्टी गिनती)
+           ========================================================================== -->
+      <section class="countdown-section reveal-on-scroll">
+        <h2 class="section-title">शुभ घड़ी का काउंटडाउन</h2>
+        <div class="timer-grid">
+          <div class="timer-box">
+            <div class="timer-number" id="days">00</div>
+            <div class="timer-label">दिन</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-number" id="hours">00</div>
+            <div class="timer-label">घंटे</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-number" id="minutes">00</div>
+            <div class="timer-label">मिनट</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-number" id="seconds">00</div>
+            <div class="timer-label">सेकंड</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Date Badge -->
+      <section class="muhurat-card reveal-on-scroll">
+        <i class="fa-solid fa-calendar-days divider-icon" style="font-size: 2.2rem; margin-bottom: 12px;"></i>
+        <div class="date-badge">बुधवार, 25 नवंबर 2026</div>
+        <div class="time-badge">शुभ पाणिग्रहण संस्कार: शुभलग्नानुसार</div>
+        <button class="calendar-btn" id="add-to-calendar-btn">
+          <i class="fa-regular fa-calendar-plus"></i> गूगल कैलेंडर में तारीख जोड़ें
+        </button>
+      </section>
+
+      <!-- ==========================================================================
+           5. VERTICAL WEDDING EVENTS TIMELINE (मांगलिक कार्यक्रम)
+           ========================================================================== -->
+      <section class="events-section reveal-on-scroll">
+        <h2 class="section-title">मांगलिक कार्यक्रम (Timeline)</h2>
+        
+        <div class="timeline-wrapper">
+          
+          <!-- Event 1 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-bell"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">गणेश निमंत्रण</h3>
+              <div class="event-date">बुधवार, 18 नवंबर 2026</div>
+              <div class="event-time">प्रातः 06:15 बजे</div>
+              <div class="event-desc">प्रथम पूज्य श्री गणेश जी का निमंत्रण एवं स्थापना</div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">लग्न टीका</h3>
+              <div class="event-date">शनिवार, 21 नवंबर 2026</div>
+              <div class="event-time">सायं 05:15 बजे</div>
+              <div class="event-desc">शुभ लग्न एवं टीका समारोह</div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">हल्दी-मेहंदी</h3>
+              <div class="event-date">सोमवार, 23 नवंबर 2026</div>
+              <div class="event-time">दोपहर 02:15 बजे</div>
+              <div class="event-desc">मांगलिक हल्दी उबटन एवं शगुन की मेहंदी</div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-music"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">महिला संगीत</h3>
+              <div class="event-date">सोमवार, 23 नवंबर 2026</div>
+              <div class="event-time">दोपहर 03:15 बजे</div>
+              <div class="event-desc">पारंपरिक लोकगीत एवं संगीत संध्या</div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-campground"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">मण्डप चाक-भात</h3>
+              <div class="event-date">मंगलवार, 24 नवंबर 2026</div>
+              <div class="event-time">सायं 07:15 बजे</div>
+              <div class="event-desc">मण्डप रोपण, चाक पूजन एवं मायरा (भात)</div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-utensils"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">प्रीतिभोज</h3>
+              <div class="event-date">बुधवार, 25 नवंबर 2026</div>
+              <div class="event-time">सायं 04:15 बजे</div>
+              <div class="event-desc">स्नेह मिलन एवं स्वरुचिकर प्रीतिभोज</div>
+            </div>
+          </div>
+
+          <!-- Event 7 -->
+          <div class="timeline-item">
+            <div class="timeline-badge"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="timeline-card">
+              <h3 class="event-name">पाणिग्रहण संस्कार</h3>
+              <div class="event-date">बुधवार, 25 नवंबर 2026</div>
+              <div class="event-time">समय: शुभलग्नानुसार</div>
+              <div class="event-desc">वैदिक मन्त्रोचार के साथ सात फेरे एवं विवाह संस्कार</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Barat Departure Info -->
+        <div class="barat-info-card reveal-on-scroll">
+          <div class="barat-title"><i class="fa-solid fa-horse"></i> बारात प्रस्थान एवं गंतव्य</div>
+          <div class="barat-details">
+            <strong>कार्यक्रम स्थल :-</strong> अपने निवास स्थान नहर मोहल्ला, भनोखर, अलवर<br><br>
+            <strong>नोट :-</strong> बारात बुधवार, 25 नवंबर 2026 को दोपहर 01:00 बजे अपने निवास स्थान भनोखर से रवाना होकर <strong>ग्राम- खेडा, पोस्ट- वसुन्धरा, जिला-एटा, यू.पी.</strong> के लिए प्रस्थान करेगी।
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           6. PARINAY SUTRA BANDHAN (परिणय-सूत्र-बन्धन)
+           ========================================================================== -->
+      <section class="parichay-section reveal-on-scroll">
+        <h2 class="section-title">परिणय-सूत्र-बन्धन</h2>
+        <p style="text-align: center; font-family: var(--font-hindi-sub); font-size: 1.2rem; color: var(--gold-light); margin-bottom: 25px;">
+          की मधुर बेला पर आपको सादर आमंत्रित करते हैं,<br>
+          कृपया पधारकर नवयुगल को स्नेहाशीर्वाद प्रदान कर अनुग्रहित करें।
+        </p>
+
+        <div class="parichay-grid">
+          
+          <div class="parichay-card">
+            <div class="parichay-side-header">वर पक्ष (Groom Side)</div>
+            <div class="parichay-name">आयुष्मान नन्दकिशोर</div>
+            <ul class="parichay-details-list">
+              <li><strong>सुपौत्र:</strong> स्व. श्रीमती रामो देवी एवं स्व. श्री मूल्या चौहान</li>
+              <li><strong>सुपुत्र:</strong> श्रीमती भूरी देवी एवं प्रकाश चौहान</li>
+              <li><strong>निवास स्थान:</strong> नहर मोहल्ला, भनोखर, अलवर (राजस्थान)</li>
+            </ul>
+          </div>
+
+          <div class="parichay-card">
+            <div class="parichay-side-header">वधू पक्ष (Bride Side)</div>
+            <div class="parichay-name">आयुष्मती दीक्षा</div>
+            <ul class="parichay-details-list">
+              <li><strong>सुपुत्री:</strong> श्रीमती विजय लक्ष्मी देवी एवं श्री रामबरण सिंह जी</li>
+              <li><strong>निवास स्थान:</strong> खेडा, पोस्ट-वसुन्धरा, जिला-एटा, उ.प्र.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           7. FAMILY MEMBERS & DETAILS (परिवार के सदस्य)
+           ========================================================================== -->
+      <section class="family-group-section reveal-on-scroll">
+        <h2 class="section-title">परिवार एवं स्नेहीजन</h2>
+
+        <!-- Vineet (विनीत) -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-hands-praying"></i> विनीत :</div>
+          <div class="name-chips-grid">
+            <div class="name-chip highlight">स्व. गमन चौहान</div>
+            <div class="name-chip highlight">मांगी चौहान</div>
+            <div class="name-chip highlight">प्रकाश चौहान</div>
+          </div>
+          <p style="text-align: center; margin-top: 15px; color: var(--gold-light);">
+            नहर मोहल्ला, भनोखर, अलवर (राज.)
+          </p>
+        </div>
+
+        <!-- Contact Numbers -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-phone"></i> संपर्क सूत्र (Contact Numbers)</div>
+          <div class="contacts-grid">
+            <a href="tel:9509331908" class="contact-btn-card">
+              <i class="fa-solid fa-phone-volume contact-icon"></i>
+              <div class="contact-name">प्रकाश चौहान / परिवार</div>
+              <div class="contact-number">9509331908</div>
+            </a>
+            <a href="tel:8769352751" class="contact-btn-card">
+              <i class="fa-solid fa-phone-volume contact-icon"></i>
+              <div class="contact-name">संपर्क सूत्र 2</div>
+              <div class="contact-number">8769352751</div>
+            </a>
+            <a href="tel:8955218596" class="contact-btn-card">
+              <i class="fa-solid fa-phone-volume contact-icon"></i>
+              <div class="contact-name">संपर्क सूत्र 3</div>
+              <div class="contact-number">8955218596</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Swagatkarta (स्वागतकर्त्ता) -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-heart"></i> स्वागतकर्त्ता :</div>
+          <div class="name-chips-grid">
+            <div class="name-chip">गिन्नी – सुआ लाल</div>
+            <div class="name-chip">कमला – स्व. कन्हैयालाल</div>
+            <div class="name-chip">हरभेजी – हीरालाल</div>
+            <div class="name-chip">पिंकी – अमित</div>
+            <div class="name-chip">सुनिता – मांगीलाल</div>
+            <div class="name-chip">गुड्डी – पवन</div>
+            <div class="name-chip">काजल – विकास</div>
+          </div>
+        </div>
+
+        <!-- Darshanabilashi (दर्शनाभिलाषी) -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-users"></i> दर्शनाभिलाषी :</div>
+          <div class="name-chips-grid">
+            <div class="name-chip">मुकेश चौहान</div>
+            <div class="name-chip">अर्जुन चौहान</div>
+            <div class="name-chip">बबलू चौहान</div>
+            <div class="name-chip">तेजराम चौहान</div>
+            <div class="name-chip">खेम्मी चौहान</div>
+            <div class="name-chip">सोनू चौहान</div>
+            <div class="name-chip">मोनू चौहान</div>
+            <div class="name-chip">मनीष चौहान</div>
+            <div class="name-chip">अंकित चौहान</div>
+            <div class="name-chip highlight">एवं समस्त चौहान परिवार</div>
+          </div>
+        </div>
+
+        <!-- Nanihal Paksh (ननिहाल पक्ष) -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-house-chimney-window"></i> ननिहाल पक्ष :</div>
+          <div class="name-chips-grid">
+            <div class="name-chip">श्री हरीसिंह जी – चन्द्रवती</div>
+            <div class="name-chip">मांगीलाल जी – ओमवती</div>
+            <div class="name-chip">हरख्याल जी – हुकमा संगीता</div>
+            <div class="name-chip">रामगोपाल जी – सुनिता</div>
+          </div>
+        </div>
+
+        <!-- Bal Manuhar (बाल मनुहार) -->
+        <div class="family-box-card">
+          <div class="family-box-title"><i class="fa-solid fa-child"></i> बाल मनुहार :</div>
+          <p style="text-align: center; font-family: var(--font-hindi-cursive); font-size: 1.25rem; color: var(--gold-light); margin-bottom: 18px;">
+            "छोटे-छोटे पैर हमारे कैसे आयें बुलाने को, हमारे भैया की शादी में भूल न जाना आने को :-"
+          </p>
+          <div class="name-chips-grid">
+            <div class="name-chip">सानू</div>
+            <div class="name-chip">निहाल</div>
+            <div class="name-chip">रिधीमा</div>
+            <div class="name-chip">चिराग</div>
+            <div class="name-chip">ईशान्त</div>
+            <div class="name-chip">लव्यांश</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================================================
+           8. VENUE & GOOGLE MAPS (विवाह स्थल)
+           ========================================================================== -->
+      <section class="venue-section reveal-on-scroll">
+        <h2 class="section-title">विवाह स्थल (Venue)</h2>
+        <div class="venue-name">अपने निवास स्थान</div>
+        <div class="venue-address">
+          नहर मोहल्ला, भनोखर,<br>
+          जिला — अलवर (राजस्थान)
+        </div>
+        <a href="https://maps.google.com/?q=Bhanokhar,Alwar,Rajasthan" target="_blank" class="map-btn">
+          <i class="fa-solid fa-location-dot"></i> Google Maps पर लोकेशन देखें
+        </a>
+      </section>
+
+      <!-- ==========================================================================
+           9. ORIGINAL INVITATION CARDS VIEWER (हमारे विवाह के निमंत्रण पत्र)
+           ========================================================================== -->
+      <section class="cards-section reveal-on-scroll">
+        <h2 class="section-title">हमारे विवाह के निमंत्रण पत्र</h2>
+        <div class="cards-grid">
+          
+          <!-- Card 1: Main Invite -->
+          <div class="card-preview-item" data-card-src="images/card_main.jpg" data-card-title="मुख्य विवाह निमंत्रण">
+            <div class="card-thumb-wrapper">
+              <img src="images/card_main.jpg" alt="मुख्य विवाह निमंत्रण" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>📜 मुख्य विवाह निमंत्रण</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_main.jpg सेव करें]</text></svg>';">
+              <div class="card-hover-overlay">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                <span>कार्ड पूरा देखें (Zoom & Read)</span>
+              </div>
+            </div>
+            <h3 class="card-preview-title">मुख्य विवाह निमंत्रण</h3>
+          </div>
+
+          <!-- Card 2: Mangalik Karyakram -->
+          <div class="card-preview-item" data-card-src="images/card_mangalik.jpg" data-card-title="मांगलिक कार्यक्रम">
+            <div class="card-thumb-wrapper">
+              <img src="images/card_mangalik.jpg" alt="मांगलिक कार्यक्रम" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>🪔 मांगलिक कार्यक्रम</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_mangalik.jpg सेव करें]</text></svg>';">
+              <div class="card-hover-overlay">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                <span>कार्ड पूरा देखें (Zoom & Read)</span>
+              </div>
+            </div>
+            <h3 class="card-preview-title">मांगलिक कार्यक्रम</h3>
+          </div>
+
+          <!-- Card 3: Parinay Sutra Bandhan -->
+          <div class="card-preview-item" data-card-src="images/card_parichay.jpg" data-card-title="परिणय-सूत्र-बन्धन">
+            <div class="card-thumb-wrapper">
+              <img src="images/card_parichay.jpg" alt="परिणय-सूत्र-बन्धन" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%\' height=\'100%\' fill=\'%233B030A\' stroke=\'%23D4AF37\' stroke-width=\'4\'/><text x=\'50%\' y=\'45%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFF0B3\' font-size=\'20\' font-family=\'serif\'>🤝 परिणय-सूत्र-बन्धन</text><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\'>[card_parichay.jpg सेव करें]</text></svg>';">
+              <div class="card-hover-overlay">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                <span>कार्ड पूरा देखें (Zoom & Read)</span>
+              </div>
+            </div>
+            <h3 class="card-preview-title">परिणय-सूत्र-बन्धन</h3>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           10. PHOTO GALLERY (फोटो गैलरी)
+           ========================================================================== -->
+      <section class="gallery-section reveal-on-scroll">
+        <h2 class="section-title">मधुर स्मृतियां (फोटो गैलरी)</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/couple.jpg" alt="आयुष्मान नन्दकिशोर संग आयुष्मती दीक्षा">
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/groom.jpg" alt="वर आयुष्मान नन्दकिशोर">
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bride.jpg" alt="वधू आयुष्मती दीक्षा">
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           11. RSVP & GUEST WISHES WALL
+           ========================================================================== -->
+      <section class="rsvp-section reveal-on-scroll">
+        <h2 class="section-title">शुभकामनाएं एवं उपस्थिति (RSVP)</h2>
+        <div class="rsvp-box">
+          <form id="rsvp-form">
+            <div class="form-group">
+              <label for="guest-name">आपका नाम (Your Name) *</label>
+              <input type="text" id="guest-name" placeholder="अपना नाम लिखें..." required>
+            </div>
+            <div class="form-group">
+              <label for="guest-wish">वर-वधू के लिए शुभकामना संदेश (Message for Couple)</label>
+              <textarea id="guest-wish" rows="3" placeholder="वर-वधू को आशीर्वाद एवं शुभकामनाएं लिखें..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> संदेश भेजें एवं पुष्टि करें
+            </button>
+          </form>
+
+          <div class="wishes-feed" id="wishes-feed"></div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           12. WHATSAPP SHARE
+           ========================================================================== -->
+      <section class="share-section reveal-on-scroll">
+        <button class="whatsapp-share-btn" id="whatsapp-share-btn">
+          <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप पर निमंत्रण पत्र शेयर करें
+        </button>
+      </section>
+
+      <!-- Footer -->
+      <footer class="royal-footer">
+        <div class="footer-text">|| पधारो म्हारे आंगणे ||</div>
+        <div class="footer-sub">विनीत: चौहान एवं श्री रामबरण सिंह जी परिवार</div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="गैलरी फ़ोटो" class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <!-- Interactive Card Viewer Modal -->
+  <div class="card-modal" id="card-modal">
+    <div class="card-modal-header">
+      <h3 id="card-modal-title" class="card-modal-title">विवाह निमंत्रण पत्र</h3>
+      <div class="card-modal-actions">
+        <button class="modal-btn" id="zoom-in-btn" title="ज़ूम इन (+)"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <button class="modal-btn" id="zoom-out-btn" title="ज़ूम आउट (-)"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button class="modal-btn" id="zoom-reset-btn" title="रीसेट (↺)"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="modal-btn close-btn" id="card-modal-close" title="बंद करें (✕)"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="card-modal-body" id="card-modal-body">
+      <img src="" alt="निमंत्रण पत्र" id="card-modal-img" class="card-modal-img">
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
